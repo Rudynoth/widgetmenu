@@ -18,9 +18,8 @@
 
         .navMenu {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
             background-color: #7b66ff;
             font-family: 'Lato', sans-serif;
             padding: 10px;
@@ -43,24 +42,22 @@
         .navMenu i {
             margin-right: 8px;
         }
-
-        @media (max-width: 600px) {
-            .navMenu {
-                flex-direction: column;
-            }
-
-            .navMenu a {
-                text-align: left;
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
     <nav class="navMenu">
         <a id="home" onclick="navigate('home')" href="#"><i class="fa-solid fa-house"></i>Home</a>
         <a id="inbox" onclick="navigate('inbox')" href="#"><i class="fa-solid fa-inbox"></i>Inbox</a>
-        <!-- ...otros enlaces... -->
+        <a id="week" onclick="navigate('week')" href="#"><i class="fa-solid fa-calendar-week"></i>Planner</a>
+        <a id="projects" onclick="navigate('projects')" href="#"><i class="fa-solid fa-briefcase"></i>Projects</a>
+        <a id="tasks" onclick="navigate('tasks')" href="#"><i class="fa-solid fa-list-check"></i>Tasks</a>
+        <a id="business" onclick="navigate('business')" href="#"><i class="fa-solid fa-money-bill-wave"></i>Business</a>
+        <a id="knowledge" onclick="navigate('knowledge')" href="#"><i class="fa-solid fa-lightbulb"></i>Knowledge</a>
+        <a id="topics" onclick="navigate('topics')" href="#"><i class="fa-solid fa-layer-group"></i>Topics</a>
+        <a id="notes" onclick="navigate('notes')" href="#"><i class="fa-solid fa-book"></i>Notes</a>
+        <a id="media" onclick="navigate('media')" href="#"><i class="fa-solid fa-bookmark"></i>Media</a>
+        <a id="resources" onclick="navigate('resources')" href="#"><i class="fa-solid fa-wrench"></i>Resources</a>
+        <a id="lifewiki" onclick="navigate('lifewiki')" href="#"><i class="fa-solid fa-heart"></i>Lifewiki</a>
     </nav>
 
     <script>
