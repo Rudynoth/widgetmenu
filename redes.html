@@ -13,15 +13,11 @@
         .social-icon {
             background-color: #004d7a; /* Fondo azul oscuro */
             color: #ffffff; /* Color del texto e ícono */
-            padding: 8px; /* Padding ajustado */
-            margin: 2px; /* Margin reducido */
+            padding: 10px;
+            margin: 5px;
             border-radius: 5px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
             transition: all 0.3s ease; /* Transición suave para varios cambios */
-        }
-
-        .social-icon i {
-            font-size: 20px; /* Tamaño de ícono ajustado */
         }
 
         .social-icon:hover {
@@ -29,33 +25,44 @@
             transform: scale(1.1); /* Efecto de crecimiento al pasar el ratón */
         }
 
-        .navMenu {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            padding: 5px; /* Padding ajustado para reducir espacio */
-            margin: 0; /* Sin margen adicional */
-            background-color: transparent; /* Fondo transparente */
-        }
-
         /* Colores personalizados para cada red social al pasar el ratón */
         #facebook.social-icon:hover { background-color: #3b5998; }
         #instagram.social-icon:hover { background-color: #e4405f; }
-        /* ...otros estilos de colores... */
+        #linkedin.social-icon:hover { background-color: #0077b5; }
+        #twitter.social-icon:hover { background-color: #1da1f2; }
+        #reddit.social-icon:hover { background-color: #ff4500; }
+        #tiktok.social-icon:hover { background-color: #000000; }
+        #youtube.social-icon:hover { background-color: #FF0000; }
+        #pinterest.social-icon:hover { background-color: #E60023; }
+        #telegram.social-icon:hover { background-color: #0088cc; }
     </style>
 </head>
 <body>
 
     <!-- Enlaces de redes sociales / servicios -->
-    <nav class="navMenu">
-        <!-- Tus enlaces de redes sociales aquí -->
-    </nav>
+    <a id="facebook" class="social-icon" onclick="navigate('facebook')" href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a id="instagram" class="social-icon" onclick="navigate('instagram')" href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a id="linkedin" class="social-icon" onclick="navigate('linkedin')" href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a id="twitter" class="social-icon" onclick="navigate('twitter')" href="#"><i class="fa-brands fa-twitter"></i></a>
+    <a id="reddit" class="social-icon" onclick="navigate('reddit')" href="#"><i class="fa-brands fa-reddit"></i></a>
+    <a id="tiktok" class="social-icon" onclick="navigate('tiktok')" href="#"><i class="fa-brands fa-tiktok"></i></a>
+    <a id="youtube" class="social-icon" onclick="navigate('youtube')" href="#"><i class="fa-brands fa-youtube"></i></a>
+    <a id="pinterest" class="social-icon" onclick="navigate('pinterest')" href="#"><i class="fa-brands fa-pinterest"></i></a>
+    <a id="telegram" class="social-icon" onclick="navigate('telegram')" href="#"><i class="fa-brands fa-telegram"></i></a>
 
     <script>
         function navigate(id) {
             var urls = {
                 'facebook': "https://facebook.com/",
-                /* ...otros enlaces... */
+                'instagram': "https://instagram.com",
+                'linkedin': "https://www.linkedin.com/",
+                'twitter': "https://twitter.com/",
+                'reddit': "https://www.reddit.com/",
+                'tiktok': "https://www.tiktok.com/",
+                'youtube': "https://www.youtube.com/",
+                'pinterest': "https://www.pinterest.com/",
+                'telegram': "https://web.telegram.org/",
+                // ...otros enlaces...
             };
             if (urls[id]) {
                 window.open(urls[id], '_blank').focus();
