@@ -18,14 +18,12 @@
 
         .navMenu {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            background-color: #7b66ff;
+            background-color: #004d7a; /* Azul oscuro */
             font-family: 'Lato', sans-serif;
             padding: 10px;
             margin: 10px auto;
-            position: relative;
         }
 
         .navMenu a {
@@ -38,41 +36,11 @@
         }
 
         .navMenu a:hover {
-            color: #c5fff8;
+            color: #ffd700; /* Amarillo claro */
         }
 
         .navMenu i {
             margin-right: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .navMenu a:hover i {
-            transform: rotate(10deg);
-        }
-
-        .submenu {
-            display: none;
-            position: absolute;
-            background-color: #7b66ff;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 12px;
-            z-index: 1;
-        }
-
-        .navMenu a:hover .submenu {
-            display: block;
-        }
-
-        .search-container {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .search-container input {
-            padding: 6px;
-            margin-top: 8px;
-            font-size: 17px;
-            border: none;
         }
 
         @media (max-width: 600px) {
@@ -89,40 +57,12 @@
 </head>
 <body>
     <nav class="navMenu">
-        <a id="home" onclick="navigate('home')" href="#"><i class="fa-solid fa-house"></i>Home</a>
-        <a id="inbox" onclick="navigate('inbox')" href="#"><i class="fa-solid fa-inbox"></i>Inbox</a>
-        <a id="week" onclick="navigate('week')" href="#"><i class="fa-solid fa-calendar-week"></i>Planner</a>
-        <a id="projects" onclick="navigate('projects')" href="#"><i class="fa-solid fa-briefcase"></i>Projects
-            <div class="submenu">
-                <a href="#">Subproject 1</a>
-                <a href="#">Subproject 2</a>
-                <!-- más enlaces de submenú aquí -->
-            </div>
-        </a>
-        <a id="tasks" onclick="navigate('tasks')" href="#"><i class="fa-solid fa-list-check"></i>Tasks</a>
-        <a id="business" onclick="navigate('business')" href="#"><i class="fa-solid fa-money-bill-wave"></i>Business</a>
-        <a id="knowledge" onclick="navigate('knowledge')" href="#"><i class="fa-solid fa-lightbulb"></i>Knowledge</a>
-        <a id="topics" onclick="navigate('topics')" href="#"><i class="fa-solid fa-layer-group"></i>Topics</a>
-        <a id="notes" onclick="navigate('notes')" href="#"><i class="fa-solid fa-book"></i>Notes</a>
-        <a id="media" onclick="navigate('media')" href="#"><i class="fa-solid fa-bookmark"></i>Media</a>
-        <a id="resources" onclick="navigate('resources')" href="#"><i class="fa-solid fa-wrench"></i>Resources</a>
-        <a id="lifewiki" onclick="navigate('lifewiki')" href="#"><i class="fa-solid fa-heart"></i>Lifewiki</a>
-        <div class="search-container">
-            <input type="text" placeholder="Buscar...">
-        </div>
+        <!-- Enlaces del menú aquí -->
     </nav>
 
     <script>
         function navigate(id) {
-            var urls = {
-                'home': "https://www.notion.so/open-servicios-integrales/GESTI-N-FINANCIERA-7234621a5a3d4cea9301f9e42fb4cc82?pvs=4",
-                'inbox': "https://example.com",
-                // Añadir más enlaces aquí
-                // ...
-            };
-            if (urls[id]) {
-                window.open(urls[id], '_parent').focus();
-            }
+            // Tu lógica de navegación aquí
         }
     </script>
 </body>
