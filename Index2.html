@@ -18,12 +18,16 @@
 
         .navMenu {
             display: flex;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             background-color: #004d7a; /* Azul oscuro */
             font-family: 'Lato', sans-serif;
             padding: 10px;
-            margin: 10px auto;
+        }
+
+        .navMenu img.logo {
+            height: 50px;
+            margin-right: 20px;
         }
 
         .navMenu a {
@@ -42,10 +46,18 @@
         .navMenu i {
             margin-right: 8px;
         }
+
+        @media (max-width: 800px) {
+            .navMenu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="navMenu">
+        <a href="#"><img src="URL_DE_TU_LOGO_AQUÍ" alt="Logo" class="logo"></a>
         <a id="home" onclick="navigate('home')" href="#"><i class="fa-solid fa-house"></i>Home</a>
         <a id="inbox" onclick="navigate('inbox')" href="#"><i class="fa-solid fa-inbox"></i>Inbox</a>
         <a id="week" onclick="navigate('week')" href="#"><i class="fa-solid fa-calendar-week"></i>Planner</a>
