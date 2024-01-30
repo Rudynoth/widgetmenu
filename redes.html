@@ -20,39 +20,35 @@
         }
 
         .social-icon:hover {
-            background-color: #007bff; /* Cambio de color al pasar el ratón */
+            /* Colores al pasar el ratón, ajustar según la paleta de colores */
+            background-color: #007bff; /* Por ejemplo, azul más claro */
         }
+
+        /* Ejemplo de colores personalizados para cada red social */
+        #facebook.social-icon:hover { background-color: #3b5998; }
+        #instagram.social-icon:hover { background-color: #e4405f; }
+        #linkedin.social-icon:hover { background-color: #0077b5; }
+        #twitter.social-icon:hover { background-color: #1da1f2; }
+        /* Añade más estilos personalizados aquí */
+
     </style>
 </head>
 <body>
 
     <!-- Enlaces de redes sociales / servicios -->
-    <a id="blog" class="social-icon" onclick="navigate('blog')" href="#"><i class="fa-solid fa-blog"></i> Blog</a>
-    <a id="email" class="social-icon" onclick="navigate('email')" href="#"><i class="fa-solid fa-envelope"></i> Email</a>
     <a id="facebook" class="social-icon" onclick="navigate('facebook')" href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
     <a id="instagram" class="social-icon" onclick="navigate('instagram')" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
     <a id="linkedin" class="social-icon" onclick="navigate('linkedin')" href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
     <a id="twitter" class="social-icon" onclick="navigate('twitter')" href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
-    <a id="reddit" class="social-icon" onclick="navigate('reddit')" href="#"><i class="fa-brands fa-reddit"></i> Reddit</a>
-    <a id="tiktok" class="social-icon" onclick="navigate('tiktok')" href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-    <a id="youtube" class="social-icon" onclick="navigate('youtube')" href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
-    <a id="pinterest" class="social-icon" onclick="navigate('pinterest')" href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
-    <a id="telegram" class="social-icon" onclick="navigate('telegram')" href="#"><i class="fa-brands fa-telegram"></i> Telegram</a>
+    <!-- Añade más enlaces aquí siguiendo el mismo patrón -->
 
     <script>
         function navigate(id) {
             var urls = {
-                'blog': "https://blog.shorouk.dev",
-                'email': "mailto:someone@yoursite.com",
                 'facebook': "https://facebook.com/",
                 'instagram': "https://instagram.com",
                 'linkedin': "https://www.linkedin.com/",
                 'twitter': "https://twitter.com/",
-                'reddit': "https://www.reddit.com/",
-                'tiktok': "https://www.tiktok.com/",
-                'youtube': "https://www.youtube.com/",
-                'pinterest': "https://www.pinterest.com/",
-                'telegram': "https://web.telegram.org/",
                 // ...otros enlaces...
             };
             if (urls[id]) {
