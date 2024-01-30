@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        .social-icon {
+            background-color: #004d7a; /* Fondo azul oscuro */
+            color: #ffffff; /* Color del texto e ícono */
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s; /* Transición suave para el fondo */
+        }
+
+        .social-icon:hover {
+            background-color: #007bff; /* Cambio de color al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Enlaces de redes sociales / servicios -->
+    <a id="blog" class="social-icon" onclick="navigate('blog')" href="#"><i class="fa-solid fa-blog"></i> Blog</a>
+    <a id="email" class="social-icon" onclick="navigate('email')" href="#"><i class="fa-solid fa-envelope"></i> Email</a>
+    <a id="facebook" class="social-icon" onclick="navigate('facebook')" href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    <!-- Añade más enlaces aquí siguiendo el mismo patrón -->
+
+    <script>
+        function navigate(id) {
+            var urls = {
+                'blog': "https://blog.shorouk.dev",
+                'email': "mailto:someone@yoursite.com",
+                'facebook': "https://facebook.com/",
+                // ...otros enlaces...
+            };
+            if (urls[id]) {
+                window.open(urls[id], '_blank').focus();
+            }
+        }
+    </script>
+</body>
+</html>
