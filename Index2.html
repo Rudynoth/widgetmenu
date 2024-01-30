@@ -57,14 +57,22 @@
 </head>
 <body>
     <nav class="navMenu">
-        <!-- Enlaces del menú aquí -->
+        <a id="home" onclick="navigate('home')" href="#"><i class="fa-solid fa-house"></i>Home</a>
+        <a id="inbox" onclick="navigate('inbox')" href="#"><i class="fa-solid fa-inbox"></i>Inbox</a>
+        <!-- ...otros enlaces... -->
     </nav>
 
     <script>
         function navigate(id) {
-            // Tu lógica de navegación aquí
+            var urls = {
+                'home': "https://www.notion.so/open-servicios-integrales/GESTI-N-FINANCIERA-7234621a5a3d4cea9301f9e42fb4cc82?pvs=4",
+                'inbox': "https://example.com",
+                // ...otros enlaces...
+            };
+            if (urls[id]) {
+                window.open(urls[id], '_parent').focus();
+            }
         }
     </script>
 </body>
 </html>
- 
