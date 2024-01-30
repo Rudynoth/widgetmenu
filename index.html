@@ -18,14 +18,15 @@
 
         .navMenu {
             display: flex;
-            flex-direction: column; /* Asegura disposición vertical */
+            flex-direction: column;
             align-items: flex-start;
             background-color: #7b66ff;
             font-family: 'Lato', sans-serif;
             padding: 10px;
             margin: 10px auto;
-            max-height: 100vh; /* Altura máxima */
-            overflow-y: auto; /* Barra de desplazamiento si es necesario */
+            max-width: 250px; /* Ancho máximo del menú */
+            max-height: 100vh;
+            overflow-y: auto;
         }
 
         .navMenu a {
@@ -67,6 +68,16 @@
             var urls = {
                 'home': "https://www.notion.so/open-servicios-integrales/GESTI-N-FINANCIERA-7234621a5a3d4cea9301f9e42fb4cc82?pvs=4",
                 'inbox': "https://example.com",
+                'week': "https://example.com",
+                'projects': "https://example.com",
+                'tasks': "https://example.com",
+                'business': "https://example.com",
+                'knowledge': "https://example.com",
+                'topics': "https://example.com",
+                'notes': "https://example.com",
+                'media': "https://example.com",
+                'resources': "https://example.com",
+                'lifewiki': "https://example.com",
                 // ...otros enlaces...
             };
             if (urls[id]) {
