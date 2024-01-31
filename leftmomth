@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <title>Tiempo Restante en este Mes</title>
+    <style>
+        
+        body{
+            text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+            background-color: #fff;
+        }
+        .box{
+            display: inline-block;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #dias{
+            background-color:#0f4d4f;
+        }
+        #horas{
+            background-color:#4CAF50;
+        }
+        #minutos{
+            background-color:#76250b;
+        }
+        h2{
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="contador">
+    <h2>
+        Tiempo Restante en este Mes
+    </h2>
+    
+        <h2 class="box" id="dias"></h2>
+        <h2 class="box" id="horas"></h2>
+        <h2 class="box" id="minutos"></h2>
+    </div>
+
+<script>
+    function iniciarContador() {
+    dias_restantes = document.getElementById("dias");
+    horas_restantes = document.getElementById("horas");
+    minutos_restantes = document.getElementById("minutos");
+ 
+    }
+    function mostrarRestante() {
+    ahora = new Date();
+    dias_en_este_mes = new Date( ahora.getFullYear(), ahora.getMonth()+1, 0).getDate(); 
+    dias = dias_en_este_mes - ahora.getDate();
+    horas = 23 - ahora.getHours();
+    minutos = 59 - ahora.getMinutes();
+    dias_restantes.innerHTML = dias + " días "
+    horas_restantes.innerHTML = horas + " horas "
+    minutos_restantes.innerHTML = minutos + " mins "
+    }
+
+temporizador = setInterval(mostrarRestante, 1000) 
+iniciarContador();
+</script>
+</body>
+</html>
