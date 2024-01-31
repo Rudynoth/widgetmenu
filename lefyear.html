@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <title>Tiempo Restante en 2020</title>
+    <style>
+        
+        body {
+            text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+            background-color: #fff;
+        }
+        .box {
+            display: inline-block;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #dias {
+            background-color: #0f4d4f;
+        }
+        #horas {
+            background-color: #4CAF50;
+        }
+        #minutos {
+            background-color: #76250b;
+        }
+        h2 {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contador">
+        <h2>
+            Tiempo restante en 2021
+        </h2>    
+        
+            <h2 class="box" id="dias"></h2>
+            <h2 class="box" id="horas"></h2>
+            <h2 class="box" id="minutos"></h2>
+    </div>
+
+<script>
+    function ContadorRegresivo(date) {
+        dias_restantes = document.getElementById("dias");
+        horas_restantes = document.getElementById("horas");
+        minutos_restantes = document.getElementById("minutos");
+
+        fin = new Date(date);
+        _segundo = 1000;
+        _minuto = _segundo * 60;
+        _hora = _minuto * 60;
+        _dia = _hora * 24;
+    }
+    function mostrarRestante() {
+        ahora = new Date();
+        distancia = fin - ahora;
+        distancia2 = new Date("01/01/2021 00:00 AM") - ahora;
+        if (distancia <= 0) {
+            clearInterval(timer);
+            document.getElementById("contador").innerHTML = "<h2>¡Nada! Se acabó</h2>";
+            return;
+        } else if (distancia2 > 0) {
+            clearInterval(timer);
+            document.getElementById("contador").innerHTML = "<h2>¡2021 aún no ha comenzado!</h2>";
+            return;
+        } 
+        dias = Math.floor(distancia / _dia);
+        horas = Math.floor((distancia % _dia) / _hora);
+        minutos = Math.floor((distancia % _hora) / _minuto);
+        dias_restantes.innerHTML = dias + " días ";
+        horas_restantes.innerHTML = horas + " horas ";
+        minutos_restantes.innerHTML = minutos + " mins ";
+    }
+    
+    temporizador = setInterval(mostrarRestante, 1);
+    ContadorRegresivo("01/01/2022 00:00 AM");
+</script>
+</body>
+</html>
